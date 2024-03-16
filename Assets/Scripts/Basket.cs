@@ -23,11 +23,11 @@ public class Basket : MonoBehaviour
     void OnCollisionEnter( Collision coll ){
         GameObject collidedWith = coll.gameObject;
         if(collidedWith.tag == "Apple"){
-            Destroy(collidedWithWith);
+            Destroy(collidedWith);
             int score = int.Parse(scoreGT.text);
             score += 100;
             scoreGT.text = score.ToString();
-            if(score>HighScore.score){
+            if(score > HighScore.score){
                 HighScore.score = score;
             }
         }
